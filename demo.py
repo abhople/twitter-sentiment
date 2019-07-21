@@ -12,9 +12,9 @@ auth.set_access_token(accessToken, accessSecret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.search('hate')
+public_tweets = api.search('happy')
 
 for tweet in public_tweets:
     print(tweet.text)
     analysis = TextBlob(tweet.text)
-    print(analysis.sentiment.polarity)
+    print(analysis.sentiment.polarity) #polarity of the tweets
